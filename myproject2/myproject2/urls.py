@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('current_datetime/', views.current_datetime, name='current_datetime'),
+    path('item_list/', views.item_list, name='item_list'),
 ]
