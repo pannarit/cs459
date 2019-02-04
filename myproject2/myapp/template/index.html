@@ -1,19 +1,32 @@
 <html>
-<title>W3.CSS</title>
+<title>Fruit Shop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 .mySlides {display:none;}
+body {margin:25px;}
+
+div.polaroid {
+  width: 30%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
 </style>
 <body>
 
-<h2 class="w3-center">Manual Slideshow</h2>
+<h1 class="w3-center"><font face="Chilanka" color="green">Welcome to My Fruit Shop</font></h1>
 
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="img_snowtops.jpg" style="width:100%">
-  <img class="mySlides" src="img_lights.jpg" style="width:100%">
-  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
-  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+  <img class="mySlides" src="http://yesofcorsa.com/wp-content/uploads/2015/08/1471_fruit.jpg" style="width:100%">
+  <img class="mySlides" src="http://yesofcorsa.com/wp-content/uploads/2015/08/2553_fruit.jpg" style="width:100%">
+  <img class="mySlides" src="http://yesofcorsa.com/wp-content/uploads/2015/08/4908_fruit.jpg" style="width:100%">
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -37,7 +50,20 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
-</script>
 
+</script>
+<br>
+<div class="polaroid">
+  <img src="https://cdn-ssl.vidible.tv/prod/2015-04/06/55224e34e4b025fd8795401d_cv1.jpg" alt="5 Terre" style="width:100%">
+  <div class="container">   
+  <p>111</p> 
+  </div>
+
+</div>  
+<br><br>
+for i in Item.objects.all():
+html = html + '<li> %s %s %s %s </li>' %(i.name,i.description,i.price,i.expire)
+return HttpResponse(html)
 </body>
+
 </html>
