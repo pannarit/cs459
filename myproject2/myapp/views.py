@@ -68,26 +68,15 @@ function showDivs(n) {
 }
 
 </script>
-<br>
 
-<div class="w3-container">
-  <div class="w3-card" style="width:25%">
-    <img src="https://cdn-ssl.vidible.tv/prod/2015-04/06/55224e34e4b025fd8795401d_cv1.jpg" alt="Person" style="width:70%">
-    <div class="w3-container">
-      <h4><b>Simon</b></h4>
-      <p>The boss of all bosses</p>
-    </div>  
-  </div>
-  <br>
-
+<br><br><center>
 </body>
 
 '''
 
 
-
     for i in Item.objects.all():
-        html = html + '<p>%s %s %s %s</p><br>'%(i.name, i.description, i.price, i.expire)
+        html = html + '<div><img style="border-top:20px solid black;border-right:1px solid black;border-bottom:20px solid black;border-left:1px solid black;" src="https://cdn-ssl.vidible.tv/prod/2015-04/06/55224e34e4b025fd8795401d_cv1.jpg" width="225" height="151" /><h3>%s </h3>%s %s %s</div>'%(i.name, i.description, i.price, i.expire)
     return HttpResponse(html)
      
    
